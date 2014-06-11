@@ -32,14 +32,22 @@ static BOOL bCurPlus = YES;
         [tf setDelegate:self];
         [btn addTarget:self action:@selector(SelectBtn:) forControlEvents:UIControlEventTouchUpInside];
     }
-    
-    
 }
 
 - (void)viewDidUnload
 {
     [super viewDidUnload];
     // Release any retained subviews of the main view.
+}
+
+-(UIStatusBarStyle)preferredStatusBarStyle
+{
+    return UIStatusBarStyleLightContent;
+}
+
+-(BOOL)prefersStatusBarHidden
+{
+    return YES;
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
